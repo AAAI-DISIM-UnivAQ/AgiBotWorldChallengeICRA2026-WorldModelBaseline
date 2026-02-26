@@ -1,26 +1,26 @@
 # World Model Baseline
 
-We adopt [EVAC](https://github.com/AgibotTech/EnerVerse-AC) as the baseline model for the [AgiBot World Challenge @ IROS 2025](https://agibot-world.com/challenge) - World Model track.
+We adopt [EVAC](https://github.com/AgibotTech/EnerVerse-AC) as the baseline model for the [AgiBot World Challenge @ ICRA 2026](https://agibot-world.com/challenge2026) - World Model track.
 
 This repo provides a minial version of training codes. 
 
 ## News
 
-- [2025.07.15] 🚀🚀 **The [test server](https://huggingface.co/spaces/agibot-world/IROSChallengeWMTrack) of AgiBot World Challenge @ IROS 2025  is available now.** Please visit the [huggingface competition space](https://huggingface.co/spaces/agibot-world/IROSChallengeWMTrack) for more details. (A minor update has been made to the inference script.)
+- 🚀🚀 **The [test server](https://huggingface.co/spaces/agibot-world/ICRA26WM) of AgiBot World Challenge @ ICRA 2026  is available now.** Please visit the [huggingface competition space](https://huggingface.co/spaces/agibot-world/ICRA26WM) for more details. 
 
-- [2025.06.12] The instruction to evaluating your model locally have been released.
+- The instruction to evaluating your model locally have been released.
 
-- [2025.05.26] 🚀🚀 The minimal version of training code for [AgiBot World Challenge @ IROS 2025](https://agibot-world.com/challenge) - World Model track have been released.
+- 🚀🚀 The minimal version of training code for [AgiBot World Challenge @ ICRA 2026](https://agibot-world.com/challenge2026) - World Model track have been released.
 
-- [2025.05.26] 🔥🔥 The training and validation datasets of [AgiBot World Challenge @ IROS 2025 - World Model track](https://huggingface.co/datasets/agibot-world/AgiBotWorldChallenge-2025/tree/main/WorldModel) have been released.
+- 🔥🔥 The training and validation datasets of [AgiBot World Challenge @ ICRA 2026 - World Model track](https://huggingface.co/datasets/agibot-world/AgiBotWorldChallenge-2026/tree/main/WorldModel) have been released.
 
-- [2025.05.16] The minimal version of training code for AgibotWorld dataset and pretrained weights have been released.
+- The minimal version of training code for AgibotWorld dataset and pretrained weights have been released.
 
 ## Getting started
 
 ### Setup
 ```
-git clone https://github.com/AgibotTech/AgiBotWorldChallengeIROS2025-WorldModelBaseline.git
+git clone https://github.com/AgibotTech/AgiBotWorldChallengeICRA2026-WorldModelBaseline.git
 conda create -n enerverse python=3.10.4
 conda activate enerverse
 
@@ -36,7 +36,7 @@ pip install --no-index --no-cache-dir pytorch3d -f https://dl.fbaipublicfiles.co
 
 <ins>Kindly Reminder</ins>: To compress the size of submission files, we have converted all images used in inference to jpg format.
 
-We have released the [test set](https://huggingface.co/datasets/agibot-world/AgiBotWorldChallenge-2025/blob/main/WorldModel/test.tar.gz) for the competition, which adheres to the data organization requirement of [EWMBench](https://github.com/AgibotTech/EWMBench). To facilitate participants in conducting local evaluations using [EWMBench](https://github.com/AgibotTech/EWMBench) on the validation set, we also provide [reorganized validation set](https://huggingface.co/datasets/agibot-world/AgiBotWorldChallenge-2025/blob/main/WorldModel/val_reorganized.tar.gz) along with the corresponding inference and evaluation scripts.
+We have released the [test set](https://huggingface.co/datasets/agibot-world/AgiBotWorldChallenge-2026/blob/main/WorldModel/test.tar.gz) for the competition, which adheres to the data organization requirement of [EWMBench](https://github.com/AgibotTech/EWMBench). To facilitate participants in conducting local evaluations using [EWMBench](https://github.com/AgibotTech/EWMBench) on the validation set, we also provide [validation set](https://huggingface.co/datasets/agibot-world/AgiBotWorldChallenge-2026/blob/main/WorldModel/val.tar.gz) along with the corresponding inference and evaluation scripts.
 
 1. Download the reorganized validation set or the test dataset, or reorganize you custom dataset to the the required directory structure outlined below.
 ```
@@ -90,7 +90,7 @@ ACWM_dataset/
 
 ### Online Evaluation on test dataset
 
-Check [agibot-world/IROSChallengeWMTrack](https://huggingface.co/spaces/agibot-world/IROSChallengeWMTrack) for more information.
+Check [agibot-world/ICRA26WM](https://huggingface.co/spaces/agibot-world/ICRA26WM) for more information.
 
 
 ### Local Evaluation on validation dataset
@@ -143,20 +143,20 @@ We only use three metrics for online evaluation: **PSNR**, **scene_consistency**
 
 ### Train
 
-#### Training on [AgiBot World Challenge @ IROS 2025](https://agibot-world.com/challenge)
+#### Training on [AgiBot World Challenge @ ICRA 2026](https://agibot-world.com/challenge2026)
 
-1. Download [🤗AgiBot World Challenge @ IROS 2025 - World Model track](https://huggingface.co/datasets/agibot-world/AgiBotWorldChallenge-2025/tree/main/WorldModel) dataset.
+1. Download [🤗AgiBot World Challenge @ ICRA 2026 - World Model track](https://huggingface.co/datasets/agibot-world/AgiBotWorldChallenge-2026/blob/main/WorldModel) dataset.
 
-2. Download the checkpoint from [EVAC](https://huggingface.co/agibot-world/EnerVerse-AC), and modify ``model.pretrained_checkpoint`` in ``configs/agibotworld/train_config_iros_challenge_wm.yaml`` to the checkpoint file ``*.pt``
+2. Download the checkpoint from [EVAC](https://huggingface.co/agibot-world/EnerVerse-AC), and modify ``model.pretrained_checkpoint`` in ``configs/agibotworld/train_config_challenge_wm.yaml`` to the checkpoint file ``*.pt``
 
 3. Download the weight of [CLIP](https://huggingface.co/laion/CLIP-ViT-H-14-laion2B-s32B-b79K), and modify ``model.params.img_cond_stage_config.params.abspath``
-in ``configs/agibotworld/train_config_iros_challenge_wm.yaml`` to the absolute path to ``open_clip_pytorch_model.bin`` inside the download directory
+in ``configs/agibotworld/train_config_challenge_wm.yaml`` to the absolute path to ``open_clip_pytorch_model.bin`` inside the download directory
 
-4. Modify the path ``data.params.train.params.data_roots`` in ``configs/agibotworld/train_config_iros_challenge_wm.yaml`` to the root of AgiBotWorld dataset
+4. Modify the path ``data.params.train.params.data_roots`` in ``configs/agibotworld/train_config_challenge_wm.yaml`` to the root of AgiBotWorld dataset
 
 5. Run the script
 ```
-bash scripts/train.sh configs/agibotworld/train_config_iros_challenge_wm.yaml
+bash scripts/train.sh configs/agibotworld/train_config_challenge_wm.yaml
 ```
 
 #### Training on [AgiBotWolrd](https://huggingface.co/datasets/agibot-world/AgiBotWorld-Beta)
@@ -176,13 +176,16 @@ bash scripts/train.sh configs/agibotworld/train_config.yaml
 ```
 
 
-## TODO
-- [x] Minimal version of training code for [AgibotWorld dataset](https://github.com/OpenDriveLab/AgiBot-World) and pretrained weights.
-- [x] Release train & val dataset.
-- [x] Minimal version of training code for the challenge's dataset.
-- [x] Release test dataset(without GT).  
-- [x] Evaluation script.
-- [x] Submission instructions.
+## Tips for Success
+- Deep Dive into Evaluation Metrics: Highly recommend conducting a thorough study of the evaluation metrics. Understanding exactly how you're being graded is step one to optimization.
+- Optimize Local Validation: Evaluation attempts on the test server are limited each day. Make the most of your validation set for local testing to ensure your submissions are truly ready.
+- Handle Calibration Errors: The EVAC approach utilizes robot camera parameters to align actions with observations. However, camera calibration is rarely perfect. In a high-stakes competition, finding an effective way to mitigate these small systematic errors could be your winning edge.
+-  Think Beyond the Baseline: Don’t feel restricted to our baseline! We encourage you to explore:
+   - Higher-performance video generation models.
+   - More direct or "brute-force" methods for action signal injection.
+   - Applying preference learning to your models.
+
+- Explore State-of-the-Art (SOTA) Research: We are eager to see novel approaches. For inspiration, check out these excellent action-conditioned robotic world models: [GenieEnvisioner-Sim](https://github.com/AgibotTech/Genie-Envisioner?tab=readme-ov-file#ge-sim-inference), [Ctrl-World](https://github.com/Robert-gyj/Ctrl-World), [DreamDojo](https://github.com/NVIDIA/DreamDojo)......
 
 
 

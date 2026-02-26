@@ -154,9 +154,9 @@ data:
     batch_size: 8
     num_workers: 8
     train:
-      target: dataset.agibotworld_dataset.AgiBotWorldIROSChallenge
+      target: dataset.agibotworld_dataset.AgiBotWorldICRA26Challenge
       params:
-        data_roots: ["PATH_TO_IROS25_WM_DATASET", ]
+        data_roots: ["PATH_TO_ICRA26_WM_DATASET", ]
         domains: ["agibotworld", ]
         split: "train"
         sample_size: [320, 512]

@@ -28,7 +28,7 @@ from utils.general_utils import zero_rank_print
 from evac.lvdm.data.get_actions import parse_h5, get_actions
 
 
-class AgiBotWorldIROSChallenge(Dataset):
+class AgiBotWorldICRA26Challenge(Dataset):
     def __init__(self,
         data_roots,
         domains,
