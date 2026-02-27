@@ -182,7 +182,7 @@ bash scripts/train.sh configs/agibotworld/train_config.yaml
 - Handle Calibration Errors: The EVAC approach utilizes robot camera parameters to align actions with observations. However, camera calibration is rarely perfect. In a high-stakes competition, finding an effective way to mitigate these small systematic errors could be your winning edge.
 -  Think Beyond the Baseline: Don’t feel restricted to our baseline! We encourage you to explore:
    - Higher-performance video generation models.
-   - More direct or "brute-force" methods for action signal injection.
+   - More ingenious methods for action signal injection.
    - Applying preference learning to your models.
 
 - Explore State-of-the-Art (SOTA) Research: We are eager to see novel approaches. For inspiration, check out these excellent action-conditioned robotic world models: [GenieEnvisioner-Sim](https://github.com/AgibotTech/Genie-Envisioner?tab=readme-ov-file#ge-sim-inference), [Ctrl-World](https://github.com/Robert-gyj/Ctrl-World), [DreamDojo](https://github.com/NVIDIA/DreamDojo)......
