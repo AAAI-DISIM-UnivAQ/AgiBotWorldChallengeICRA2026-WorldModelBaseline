@@ -4,9 +4,9 @@ We adopt [EVAC](https://github.com/AgibotTech/EnerVerse-AC) as the baseline mode
 
 This repo provides a minial version of training codes. 
 
-## News
+## News 
 
-- 🚀🚀 **The [test server](https://huggingface.co/spaces/agibot-world/ICRA26WM) of AgiBot World Challenge @ ICRA 2026  is available now.** Please visit the [huggingface competition space](https://huggingface.co/spaces/agibot-world/ICRA26WM) for more details. 
+<!-- - 🚀🚀 **The [test server](https://huggingface.co/spaces/agibot-world/ICRA26WM) of AgiBot World Challenge @ ICRA 2026  is available now.** Please visit the [huggingface competition space](https://huggingface.co/spaces/agibot-world/ICRA26WM) for more details.  -->
 
 - The instruction to evaluating your model locally have been released.
 
