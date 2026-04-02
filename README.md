@@ -36,8 +36,8 @@ An alternative way to install it based on [uv](https://docs.astral.sh/uv):
 
 ```
 git clone https://github.com/AAAI-DISIM-UnivAQ/AgiBotWorldChallengeICRA2026-WorldModelBaseline.git
-./AgiBotWorldChallengeICRA2026-WorldModelBaseline/uv_setup.sh
 cd AgiBotWorldChallengeICRA2026-WorldModelBaseline
+./uv_setup.sh
 source .venv/bin/activate
 ```
 
