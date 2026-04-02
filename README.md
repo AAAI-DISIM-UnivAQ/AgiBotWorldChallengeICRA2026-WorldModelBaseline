@@ -32,7 +32,7 @@ pip install --no-index --no-cache-dir pytorch3d -f https://dl.fbaipublicfiles.co
 
 ```
 
-A method alternative to install it based on [uv](https://docs.astral.sh/uv):
+An alternative way to install it based on [uv](https://docs.astral.sh/uv):
 
 ```
 git clone https://github.com/AgibotTech/AgiBotWorldChallengeICRA2026-WorldModelBaseline.git
