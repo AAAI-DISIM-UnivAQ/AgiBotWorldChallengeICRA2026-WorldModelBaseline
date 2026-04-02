@@ -32,6 +32,15 @@ pip install --no-index --no-cache-dir pytorch3d -f https://dl.fbaipublicfiles.co
 
 ```
 
+A method alternative to install it based on [uv](https://docs.astral.sh/uv):
+
+```
+git clone https://github.com/AgibotTech/AgiBotWorldChallengeICRA2026-WorldModelBaseline.git
+./AgiBotWorldChallengeICRA2026-WorldModelBaseline/uv_setup.sh
+cd AgiBotWorldChallengeICRA2026-WorldModelBaseline
+source .venv/bin/activate
+```
+
 ### Inference
 
 <ins>Kindly Reminder</ins>: To compress the size of submission files, we have converted all images used in inference to jpg format.
